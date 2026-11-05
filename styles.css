@@ -1,0 +1,27 @@
+/* AcadHomepage's original visual styles are in assets/css/main.css.
+   Only accessibility, native navigation, and avatar sizing are added here. */
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+section > h1[id] { scroll-margin-top: 1em; }
+.author__avatar img { height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+.profile-description { white-space: normal; margin-bottom: 1em; }
+.author__name span { display: block; font-size: .75em; margin-top: .35em; font-weight: normal; }
+.greedy-nav button[hidden], .greedy-nav .hidden-links[hidden] { display: none; }
+.greedy-nav button { min-width: 44px; min-height: 44px; }
+.greedy-nav .visible-links { margin-right: 0; }
+.author__urls_sm a { display: inline-block; }
+.template-credit { margin: 3em 0 1.5em; border-top: 1px solid #f2f3f3; padding-top: 1em; font-size: .75em; color: #7a8288; }
+.skip-link { position: fixed; top: -100px; left: 1em; z-index: 100; background: #fff; padding: .5em 1em; border: 1px solid #224b8d; }
+.skip-link:focus { top: .5em; }
+a:focus-visible, button:focus-visible { outline: 2px solid #224b8d; outline-offset: 3px; }
+@media (max-width: 57.8124em) {
+  .author__avatar img { width: 75px; }
+  .author__urls_sm { white-space: nowrap; }
+}
+@media (max-width: 37.5em) {
+  .profile_box { flex-wrap: wrap; row-gap: 12px; }
+  .author__urls-wrapper { margin-left: 75px; padding-left: 10px; }
+  .author__urls_sm { padding: 0; font-size: 1.5em; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+.ccf-rank { color: #b00020; font-weight: 700; white-space: nowrap; }
